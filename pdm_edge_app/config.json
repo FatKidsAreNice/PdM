@@ -1,0 +1,42 @@
+{
+  "csv_path": "/home/edv/Desktop/sound_measurements_Saved.csv",
+  "csv": {
+    "separator": ";",
+    "encoding": "cp1252"
+  },
+  "datetime": {
+    "source_column": "created_at",
+    "format": "%d.%m.%Y %H:%M"
+  },
+  "columns": {
+    "id": "id",
+    "avg_decibel": "avg_decibel",
+    "peak_decibel": "peak_decibel",
+    "min_decibel": "min_decibel",
+    "low_freq_avg": "low_freq_avg",
+    "mid_freq_avg": "mid_freq_avg",
+    "high_freq_avg": "high_freq_avg",
+    "measurement_duration": "measurement_duration",
+    "samples_count": "samples_count",
+    "created_at": "created_at"
+  },
+  "analysis": {
+    "expected_interval_minutes": 1.0,
+    "gap_threshold_minutes": 1.5,
+    "reference_samples_count": 114,
+    "reduced_quality_min_samples": 100,
+    "baseline_grouping": "hour",
+    "plot": {
+      "max_points_per_series": 5000
+    },
+    "stage1": {
+      "robust_z_threshold": 3.0,
+      "range_z_threshold": 3.0,
+      "persistence_windows": 5
+    },
+    "stage2": {
+      "distance_quantile": 0.99,
+      "persistence_windows": 5
+    }
+  }
+}
